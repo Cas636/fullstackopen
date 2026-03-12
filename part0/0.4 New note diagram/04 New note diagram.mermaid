@@ -1,0 +1,36 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    Note right of browser: User writes "Nueva Nota Curso Johan Castaño" in the text field
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+    Note left of server: Server receives form data\ncontent="Nueva Nota Curso Johan Castaño"
+    Note left of server: Server adds new note to the list
+    server-->>browser: HTTP 302 Redirect /exampleapp/notes
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate server
+    server-->>browser: HTML document
+    deactivate server
+
+    browser->>server: GET main.css
+    activate server
+    server-->>browser: css file
+    deactivate server
+
+    browser->>server: GET main.js
+    activate server
+    server-->>browser: JavaScript file
+    deactivate server
+
+    Note right of browser: Browser executes JS to fetch notes
+
+    browser->>server: GET data.json
+    activate server
+    server-->>browser: [..., {content: "Nueva Nota Curso Johan Castaño", date: "2026-03-12T03:42:01.936Z"}]
+    deactivate server
+
+    Note right of browser: Browser renders the updated notes list
