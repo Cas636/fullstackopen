@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #e8f4fd 0%, #fff5eb 100%);
+  color: #333;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 900px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #0066cc;
+  margin-bottom: 1rem;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.search-box input {
+  flex: 1;
+  max-width: 500px;
+  padding: 0.8rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #ff8c00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.15);
+}
+
+.country-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.country-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #0066cc;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.country-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.country-item span {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.country-item button {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 600;
+}
+
+.country-item button:hover {
+  background-color: #e67e00;
+}
+
+.country-detail {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border-top: 6px solid #0066cc;
+}
+
+.country-detail h2 {
+  font-size: 2rem;
+  color: #0066cc;
+  margin-bottom: 1rem;
+}
+
+.country-detail p {
+  margin: 0.6rem 0;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.country-detail h4 {
+  margin: 1.2rem 0 0.6rem;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.country-detail ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.country-detail li {
+  background: #e8f4fd;
+  color: #0066cc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.country-detail img {
+  display: block;
+  margin: 1rem 0;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #fff5eb;
+  border-radius: 8px;
+  border-left: 4px solid #ff8c00;
+}
+
+.weather h3 {
+  font-size: 1.2rem;
+  color: #ff8c00;
+  margin-bottom: 0.5rem;
+}
+
+.weather p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.weather img {
+  vertical-align: middle;
+  margin: 0;
+}
+
+.message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-style: italic;
+}
